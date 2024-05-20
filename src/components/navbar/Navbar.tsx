@@ -1,8 +1,18 @@
-import { Link } from "react-router-dom"
+import { useContext } from "react"
+import { Link, useNavigate } from "react-router-dom"
+import { AuthContext } from "../../contexts/AuthContext"
 
 function Navbar() {
  
-  
+  const navigate = useNavigate()
+
+  const {handleLogout} = useContext(AuthContext)
+
+  function logout(){
+    handleLogout()
+    alert("O usuário foi desconectado com sucesso!")
+    navigate('/')
+  }
 
   return (
     <>
@@ -17,7 +27,7 @@ function Navbar() {
               <div className='hover:underline cursor-pointer hover:text-rose-400'>Cadastrar tema</div>
               <div className='hover:underline cursor-pointer hover:text-rose-400'>Perfil</div>
               {/* <Link to="/login" className='hover:underline cursor-pointer hover:text-rose-400'>Sair</Link> */}
-              <Link to="/login">
+              <Link to="" onClick={logout}>
                 <div className='hover:underline cursor-pointer hover:text-rose-400'>Sair</div>
               </Link>
             </div>
