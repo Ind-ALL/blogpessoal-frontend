@@ -12,8 +12,7 @@ import FormPostagem from './components/postagem/formpostagem/FormPostagem'
 import ListaPostagens from './components/postagem/listapostagens/ListaPostagens'
 import Perfil from './pages/perfil/Perfil'
 import { ToastContainer } from 'react-toastify'
-
-import 'react-toastify/dist/ReactToastify.css';
+import 'react-toastify/dist/ReactToastify.css'
 import Footer from './components/footer/Footer'
 
 function App() {
