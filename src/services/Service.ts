@@ -20,12 +20,13 @@ import axios from "axios";
  * - /postagens é a URL do endpoint
  */
 // const api = axios.create({
-//     baseURL: import.meta.env.VITE_API_URL
-// });
+//     baseURL: "https://blogpessoal-v5jv.onrender.com",
+//   });
 
 const api = axios.create({
-    baseURL: "https://blogpessoal-v5jv.onrender.com",
-  });
+    baseURL: import.meta.env.VITE_API_URL
+});
+
 
 export const cadastrarUsuario = async (url: string, dados: Object, setDados: Function) => {
     const resposta = await api.post(url, dados);
